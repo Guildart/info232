@@ -19,9 +19,8 @@ def answer_01(data):
 
     """
     # TODO : standardize data
-    data_scaled = df.copy() # REPLACE THIS
-    data_scaled.iloc[:,:-1] = (data_scaled.iloc[:,:-1] - data_scaled.iloc[:,:-1].mean())/data_scaled.iloc[:,:-1].std()
-    return data_scaled
+    scaled_data = data
+    return scaled_data
 
 
 def answer_02():
@@ -33,9 +32,9 @@ def answer_02():
         nearest_neighbors class
     """
     # Wrong classifier
-    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.naive_bayes import GaussianNB
 
-    return KNeighborsClassifier(n_neighbors = 1)
+    return GaussianNB
 
 
 def answer_03():
@@ -48,7 +47,7 @@ def answer_03():
     Returns
     -------
     """
-    from sklearn.metrics import balanced_accuracy_score as sklearn_metric
+    from sklearn.metrics import accuracy_score as sklearn_metric
     return sklearn_metric
 
 
@@ -65,7 +64,7 @@ def answer_04():
     YES = 'YES'
     NO = 'NO'
     # Return YES or NO
-    return NO
+    return None
 
 
 def answer_05():
@@ -81,7 +80,7 @@ def answer_05():
     CASE3 = "CS"
     CASE4 = "CROP"
     # Return CASE1, CASE2, CASE3 or CASE4
-    return CASE3
+    return None
 
 
 
@@ -114,7 +113,7 @@ def answer_08():
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
          "Naive Bayes", "QDA"]
 
-    overfitting_models = ['RBF SVM', 'Decision Tree', 'Random Forest']
+    overfitting_models = ["Replace", "with", "model", "names", "from", "the",  "list", "above"]
     return overfitting_models
 
 
@@ -126,7 +125,7 @@ def answer_09():
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
          "Naive Bayes", "QDA"]
 
-    underfitting_models = ['Linear SVM', 'Naive Bayes']
+    underfitting_models = ["Replace", "with", "model", "names", "from", "the", "list", "above"]
     return underfitting_models
 
 
